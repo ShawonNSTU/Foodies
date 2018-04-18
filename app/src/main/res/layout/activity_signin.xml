@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:id="@+id/relativeLayout"
+    tools:context="com.example.shawon.foodies.SigninActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="70dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:inputType="phone"
+            app:met_baseColor="#ffffff"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="20"
+            app:met_primaryColor="#ffffff"
+            app:met_singleLineEllipsis="true"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_password"
+            android:layout_below="@+id/edit_phone_number"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:inputType="textPassword"
+            app:met_baseColor="#ffffff"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="#ffffff"
+            app:met_singleLineEllipsis="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.rey.material.widget.CheckBox
+            android:id="@+id/remember_me"
+            style="@style/Material.Drawable.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Remember Me"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            app:cbd_strokeColor="@android:color/white"
+            app:cbd_tickColor="@color/colorSigninButton"
+            />
+            
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/forgot_password"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                />
+
+            </LinearLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            app:ms_arrowColor="#D03E2F"
+            android:layout_weight="1"
+            app:ms_arrowSize="16dp"
+            android:layout_marginTop="20dp"
+            app:ms_floatingLabelColor="@color/colorSigninButton"
+            app:ms_floatingLabelText="Sign in with"
+            app:ms_hint="Please Choose"
+            app:ms_multiline="true"
+            app:ms_hintColor="@android:color/white"
+            app:ms_baseColor="@color/colorSigninButton"/>
+
+
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/sign_in_button"
+        android:layout_below="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        app:buttonColor="@color/colorSigninButton"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        app:shadowColor="#000000"
+        android:fontFamily="serif"
+        app:shadowEnabled="true"
+        app:shadowHeight="5dp"
+        app:cornerRadius="4dp"/>
+
+</RelativeLayout>
